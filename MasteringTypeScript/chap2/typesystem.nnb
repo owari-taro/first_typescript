@@ -1,0 +1,38 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "### the any type"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "var item1 = { id: 1, name: \"item1\" }\nconsole.log(item1.id, item1.name);\nitem1 = { id: 2 };\nconsole.log(item1);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "1 item1",
+                                "{ id: 2 }",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
