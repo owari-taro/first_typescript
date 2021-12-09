@@ -30,7 +30,185 @@
         {
             "language": "typescript",
             "source": [
-                ""
+                "var item2: any = { id: 1, name: \"item1\" };\nitem2 = { id: 2 };\nconsole.log(item2);;"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{ id: 2 }",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "test: str = \"q32e\";\ntest = 1;\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m1\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let index: number = 0;\nif (index == 0) {\n    let index: number = 2;\n    console.log(index);\n}\nconsole.log(index)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "2",
+                                "0",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "var index: number = 0;\nif (index == 0) {\n    var index: number = 2;\n    console.log(index);\n}\nconsole.log(index)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "2",
+                                "2",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const VALUE = \"this should not be changed\";\nVALUE = \"updated?\";\nconsole.log(VALUE);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "updated?",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let array = [\"123\", \"4556\", \"789\"];\ndelete array[0];\nfor (let i = 0; i < array.length; i++){\n    if (array[i] == undefined){\n        console.log(\"undifined!!!!!\");\n    }\n    console.log(array[i]);\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undifined!!!!!",
+                                "undefined",
+                                "4556",
+                                "789",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function printValues(a: number | null) {\n    console.log(a);\n}\n\nprintValues(1);\nprintValues(null);\nprintValues(undefined);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "1",
+                                "null",
+                                "undefined",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const value: number = 10;\nconst message: string = value > 10 ?\n    \"value is larger than 10\" : \"value is 10 or lesss\";\nconsole.log(message);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "value is 10 or lesss",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "var objectA = {\n    nestedProperty: {\n    name:\"nestedPropertyName\"\n    }\n}\n\nfunction printNestedObject(obj) {\n    console.log(\"obj.nestedProperty.name=\" + obj.nestedProperty.name);\n\n}\nprintNestedObject({})"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "TypeError",
+                                "message": "Cannot read properties of undefined (reading 'name')",
+                                "stack": "    at printNestedObject (<Cell 11> [8, 11])\n    at <Cell 11> [11, 17]\n    at <Cell 11> [12, 46]\n    at Script.runInContext (node:vm:139:12)\n    at Script.runInNewContext (node:vm:144:17)\n    at Object.runInNewContext (node:vm:298:38)\n    at C (/home/biwajima/.vscode-server/extensions/donjayamanne.typescript-notebook-2.0.6/out/extension/server/index.js:2:113345)\n    at t.execCode (/home/biwajima/.vscode-server/extensions/donjayamanne.typescript-notebook-2.0.6/out/extension/server/index.js:2:114312)\n    at k.<anonymous> (/home/biwajima/.vscode-server/extensions/donjayamanne.typescript-notebook-2.0.6/out/extension/server/index.js:2:142156)\n    at k.emit (node:events:390:28)"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "a = undefined;\nconsole.log(a ?? \"hogehoge\");"
             ],
             "outputs": []
         }
