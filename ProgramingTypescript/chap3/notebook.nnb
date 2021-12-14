@@ -1,0 +1,11 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "let as: readonly number[] = [1, 2, 3];\nlet bs: readonly number[] = as.concat(5);\nconsole.log(as);\nconsole.log(bs);"
+            ],
+            "outputs": []
+        }
+    ]
+}
