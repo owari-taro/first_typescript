@@ -16,21 +16,20 @@ function App() {
     setval(event.target.value);
   }
 
-  const doAction = () => {
-    let res = <div>
+  useEffect(() => {
+      let res = <div>
       <p>軽減税率8%:{tax1}円</p>
       <p>軽減税率10%:{tax2}円</p>
     </div>
     setMsg(res);
-  }
+  },[tax1,tax2])
+
   useEffect(() => {
     setTax1(Math.floor(val * 1.08));
     console.log(tax1);
   })
   useEffect(() => {
     setTax2(Math.floor(val * 1.1));
-    console.log("tax2は表示前に書き換えられるぞ！")
-    console.log(tax2);
   })
   return (
     <div>
@@ -42,7 +41,6 @@ function App() {
           <label>input:</label>
           <input type="number" className="form-control" onChange={doChange} />
         </div>
-        <button className="btn btn-primary" onClick={doAction}>Calc</button>
       </div>
     </div>
   )
